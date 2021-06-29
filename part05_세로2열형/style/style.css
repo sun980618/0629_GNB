@@ -1,0 +1,72 @@
+@charset "UTF-8";
+@import url(style_Reset.css);
+
+div#wrap {
+    width: 400px;
+    height: 600px;
+    padding: 20px;
+    border: 1px solid #000;
+    margin: 20px auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+nav#gnb {
+    padding: 20px;
+   /* border: 1px solid #aaa;*/
+    margin: 20px auto;
+}
+
+/*#gnb > ul#mainMenu {
+    border: 1px solid #000;
+}*/
+
+#gnb li.mainLi {
+    text-align: center;
+   /* border: 1px solid #f80;*/
+    position: relative;/*자식요소ul.subMenu가pos:a이므로 위치를 left를 사용했을때 위치를 body요소 설정하지 못하도록 만듬*/
+}
+
+#gnb a {
+    width: 160px;
+    text-align: center;
+    font-size: 17px;
+    font-weight: bold;
+    border: 1px solid #eee;
+    margin: 0 auto;
+    display: inline-block;
+}
+
+#gnb li.mainLi>a {
+    height: 50px;
+    line-height: 50px;
+}
+
+#gnb li.mainLi:hover>a{
+    color: #fff;
+    background-color: lightskyblue;
+}
+
+#gnb li.subLi>a:hover {
+    color: #222;
+    background-color: #fff;
+}
+
+#gnb ul.subMenu {
+   /* transform: translateX(160px);    */
+    left: 240px;
+    /*margin-left: 238px; 여기까지 3개다 적용 가능*/
+    top: -0px;
+    position: absolute; /*absolute를 기재하면 아래쪽에 작성된 레이아웃을 아래로 밀어내지 못함*/
+    display: none; /*밑에 섭메뉴 다 사라짐*/
+
+}
+
+#gnb li.subLi>a {
+    height: 40px;
+    line-height: 40px;
+    color: #fff;
+    background-color: lightskyblue;
+}
